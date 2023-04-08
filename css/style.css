@@ -1,0 +1,14 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.price input{
+    width: 22%;
+}
+.price #total{
+    border-radius:5px;
+    text-align: center;
+    padding: 13px;
+}
+#total::before{
+    content: "Total = ";
+}

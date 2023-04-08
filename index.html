@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="curd w-75 mx-auto">
+        <div class="my-2 text-center text-uppercase">
+            <h1>cruds</h1>
+            <p>product management system</p>
+        </div>      <!-- End Title -->
+
+        <div class="inputs">
+            <input class="form-control my-1" type="text" id="title" placeholder="title">
+            <div class="price d-flex justify-content-between">
+                <input onkeyup="getTotal()" class="form-control my-1" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" class="form-control my-1" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" class="form-control my-1" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" class="form-control my-1" type="number" id="discount" placeholder="discount">
+                <small class="danger" id="total"></small>
+            </div>
+            <input class="form-control my-1" type="number" id="count" placeholder="count">
+            <input class="form-control my-1" type="text" id="category" placeholder="category">
+            <button onclick="addProduct()" class="btn btn-primary w-100" id="submit">Create</button>
+        </div>      <!-- End Inputs -->
+
+        <div class="outputs">
+            <div class="searchblock">
+                <input class="form-control my-2" onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnsearch d-flex justify-content-around">
+                    <button class="btn btn-primary" onclick = "getSearch(this.id)" id="SearchTitle">Search By Title</button>
+                    <button class="btn btn-primary" onclick = "getSearch(this.id)" id="SearchCategory">Search By Category</button>
+                </div>
+            </div>
+
+            <div class="text-center" id="deleteAll"></div>
+
+            <table class="table">
+                <thead class="text-uppercase text-center my-1">
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>      <!-- End Outputs -->
+
+    </div>      <!-- End CRUDS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
